@@ -1,0 +1,5 @@
+rule sample_volume {
+    AWS::EC2::Volume {
+        Properties.Size <= 10
+    }
+}

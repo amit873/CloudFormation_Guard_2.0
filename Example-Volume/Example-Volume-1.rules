@@ -1,0 +1,18 @@
+let example2_volume = Resources.*[ Type == 'AWS::EC2::Volume' ]
+let example2_volume_no_iops_specified = %example2_volume[ Properties.Iops NOT EXISTS ]
+let example2_volume_iops = %example2_volume[ Properties.Iops EXISTS ]
+
+rule sample_gp2_volumes {
+    WHEN %example2_volume_no_iops_specified !EMPTY {
+         %example2_volume_no_iops_specified.Properties.Size == 10
+         %example2_volume_no_iops_specified.Properties.VolumeType == 'gp2'
+    }
+}
+
+rule sample_io1_volumes {
+    WHEN %example2_volume_iops !EMPTY {
+         %example2_volume_iops.Properties.Iops == 1000
+         %example2_volume_iops.Properties.Size == 30
+         %example2_volume_iops.Properties.VolumeType == 'io1'
+    }
+}

@@ -1,0 +1,11 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+- input
+    Resources
+      SampleVolume
+        Type AWSEC2Volume
+        Properties
+          Size 100
+  expectations
+    rules
+      sample_volume FAIL
