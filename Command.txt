@@ -14,4 +14,8 @@ cfn-guard validate -d Example-Volume.yaml -r Example-Volume.rules
 cfn-guard validate -d Example-Volume-1.yaml -r Example-Volume-1.rules
 
 
+cfn-guard validate -d Bucket-Combined.yaml -r Bucket-Combined.rules
+cfn-guard validate -d Bucket-Enable-Encryption-S3_Managed_Key.yaml -r Bucket-Enable-Encryption-S3_Managed_Key.rules
+cfn-guard validate -d Bucket-Enable-Encryption-KMS_Managed_Key.yaml -r Bucket-Enable-Encryption-KMS_Managed_Key.rules
+
 
