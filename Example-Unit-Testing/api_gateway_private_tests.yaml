@@ -1,0 +1,6 @@
+---
+- name: MyTest  
+  input: {}
+  expectations:
+    rules:
+      check_rest_api_is_private: SKIP

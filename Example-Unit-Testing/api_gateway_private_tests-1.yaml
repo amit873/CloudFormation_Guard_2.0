@@ -1,0 +1,13 @@
+#  include empty resources
+---
+- name: MyTest1
+  input: {}
+  expectations:
+    rules:
+      check_rest_api_is_private: SKIP
+- name: MyTest2
+  input:
+     Resources: {}
+  expectations:
+    rules:
+      check_rest_api_is_private: SKIP

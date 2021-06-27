@@ -1,0 +1,17 @@
+cfn-guard test -r api_gateway_private_access.guard -t api_gateway_private_access_tests.yaml
+
+cfn-guard test -r s3-bucket-sse.guard -t s3-bucket-sse-tests.yaml
+
+cfn-guard validate -r k8s-pod-containers-limits.guard
+
+cfn-guard rulegen -t s3-bucket-sse-tests.yaml -o amit.ruleset
+
+cfn-guard rulegen -t EC2-Mappings.yaml -o amit.ruleset
+cfn-guard test -r amit.ruleset -t EC2-Mappings.yaml
+
+cfn-guard validate -d Example-Volume.yaml -r Example-Volume.rules
+
+cfn-guard validate -d Example-Volume-1.yaml -r Example-Volume-1.rules
+
+
+

@@ -1,0 +1,12 @@
+cfn-guard test --rules-file api_gateway_private.guard --test-data api_gateway_private_tests.yaml
+cfn-guard test --rules-file api_gateway_private.rules --test-data api_gateway_private_tests.yaml
+
+cfn-guard test --rules-file api_gateway_private.rules --test-data api_gateway_private_tests-1.yaml
+cfn-guard test --rules-file api_gateway_private.rules --test-data api_gateway_private_tests-2.yaml
+
+# Using --verbose flag that Inspect evaluation results
+cfn-guard test --rules-file api_gateway_private.rules --test-data api_gateway_private_tests-3-verbose.yaml --verbose
+
+dl-config-conformance-packs
+
+cloud-custodian-policy-examples
