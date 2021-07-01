@@ -1,0 +1,13 @@
+#
+# This document is used to S3 side encryption for S3 bucket
+#
+
+let buckets = Resources.*[ Type == 'AWS::S3::Bucket' ]
+
+rule delta_s3_bucket_encryption when %buckets !empty {
+    %buckets.Properties {
+        BucketEncryption.ServerSideEncryptionConfiguration[*] {
+            ServerSideEncryptionByDefault.SSEAlgorithm == 'AES256'
+        }
+    }
+}

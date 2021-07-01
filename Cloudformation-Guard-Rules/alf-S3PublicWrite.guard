@@ -1,0 +1,12 @@
+#
+# This document is used to create or modify the Public Read Write Access configuration for an Amazon S3 bucket
+#
+let buckets = Resources.*[ Type == 'AWS::S3::Bucket' ]
+
+
+rule delta_s3_public_access_control when %buckets !empty{    
+    %buckets.Properties {        
+        PublicAccessBlockConfiguration.IgnorePublicAcls == true
+        PublicAccessBlockConfiguration.RestrictPublicBuckets == true
+    }
+}

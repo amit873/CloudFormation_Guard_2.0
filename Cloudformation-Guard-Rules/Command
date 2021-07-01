@@ -1,0 +1,14 @@
+Command --
+
+Rule - alf-S3PublicWrite
+cfn-guard validate -d alf-S3PublicWrite.yaml -r alf-S3PublicWrite.guard
+
+Rule - dl-bucket-public-check
+cfn-guard validate -d dl-bucket-public-check.yaml -r dl-bucket-public-check.guard
+
+Rule - alf-S3ServerSideEncryption
+cfn-guard validate -d alf-S3ServerSideEncryption.yaml -r alf-S3ServerSideEncryption.guard
+
+
+Rule - dl-s3-encryption
+cfn-guard validate -d dl-s3-encryption.yaml -r dl-s3-encryption.guard
