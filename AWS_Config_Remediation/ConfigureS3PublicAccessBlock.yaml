@@ -2,7 +2,7 @@ description: |
   ### Document Name - AWSConfigRemediation-ConfigureS3PublicAccessBlock
 
   ## What does this document do?
-  This document is used to create or modify the S3 [PublicAccessBlock](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-options) configuration for an AWS account.
+  #This document is used to create or modify the S3 [PublicAccessBlock](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-options) configuration for an AWS account.
 
   ## Input Parameters
   * AccountId: (Required) Account ID of the account for which the S3 Account Public Access Block is to be configured.
